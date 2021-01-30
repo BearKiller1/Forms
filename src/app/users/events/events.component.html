@@ -1,0 +1,27 @@
+<p>events works!</p>
+<input type="text" placeholder="Search..">
+<br>
+<div class="sideMenu">
+    <p (click)="subjectOn = !subjectOn">Subject</p>
+    <div class="subject" *ngIf="subjectOn">
+        <p>Gaming</p>
+        <p>Music</p>
+        <p>Develope</p>
+    </div>
+    <p>Today</p>
+    <p>Up Coming</p>
+    <p>Past</p>
+</div>
+
+<div class="events">
+    <div class="eventHeader">
+        Title
+        Subject
+        Date
+    </div>
+    <div class="event" *ngFor="let item of data">
+        {{item.title}}
+        {{item.subject}}
+        {{item.date}}
+    </div>
+</div>
